@@ -1,0 +1,78 @@
+import math
+import operator
+
+def menu_calculadora():
+    print("\n====================")
+    print("    CALCULADORA")
+    print("====================")
+    print("1. Soma")
+    print("2. Subtração")
+    print("3. Multiplicação")
+    print("4. Divisão")
+    print("5. Potência")
+    print("6. Raiz quadrada")
+    print("7. Sair")
+
+def soma():
+    a = float(input("Digite um número: "))
+    b = float(input("Digite outro número: "))
+    c = operator.add(a,b)
+    print(f"O resultado da soma é: {c}")
+
+def sub():
+    a = float(input("Digite um número: "))
+    b = float(input("Digite outro número: "))
+    c = operator.sub(a, b)
+    print(f"O resultado da subtração é: {c}")
+
+def multi():
+    a = float(input("Digite um número: "))
+    b = float(input("Digite outro número: "))
+    c = operator.mul(a, b)
+    print(f"O resultado da multiplicação é: {c}")
+
+def div():
+    a = float(input("Digite um número: "))
+    b = float(input("Digite outro número: "))
+    if b == 0:
+        print("Erro: divisão por zero não é permitida.")
+    else:
+        c = operator.truediv(a, b)
+        print(f"O resultado da divisão é: {c}")
+
+def poten():
+    a = float(input("Digite um número: "))
+    b = float(input("Digite outro número: "))
+    c = pow(a, b)
+    print(f"O resultado da potência é: {c}")
+
+def raiz():
+    a = float(input("Digite um número: "))
+    if a < 0:
+        print("Erro: não é possível calcular a raiz quadrada de um número negativo.")
+    else:
+        b = math.sqrt(a)
+        print(f"O resultado da raiz é: {b}")
+
+# Loop principal
+while True:
+    menu_calculadora()
+    opcao = input("Escolha uma opção: ")
+
+    if opcao == "1":
+        soma()
+    elif opcao == "2":
+        sub()
+    elif opcao == "3":
+        multi()
+    elif opcao == "4":
+        div()
+    elif opcao == "5":
+        poten()
+    elif opcao == "6":
+        raiz()
+    elif opcao == "7":
+        print("Saindo...")
+        break
+    else:
+        print("Opção inválida. Tente novamente.")
