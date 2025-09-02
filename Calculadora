@@ -54,7 +54,6 @@ def raiz():
         b = math.sqrt(a)
         print(f"O resultado da raiz é: {b}")
 
-# Loop principal
 while True:
     menu_calculadora()
     opcao = input("Escolha uma opção: ")
